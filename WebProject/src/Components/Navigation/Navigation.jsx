@@ -1,6 +1,10 @@
 import { useState } from 'react';
 import logo from './logo.png'
 import './navigation.css' ;
+import { AiOutlineFilter } from 'react-icons/ai';
+import { FiMenu } from 'react-icons/fi';
+import ColorMenu from './ColorMenu';
+
 
 export const Navigation = () => {
   const [filterClass, setFilterClass] = useState('filter-not-visible')
@@ -24,24 +28,22 @@ export const Navigation = () => {
       setSortClass('sort-visible');
     }
   }
+
   
   return(
     <div>
       <div className='navigation'>  
-        <button onClick={openFilter} >X</button>
+        <div onClick={openFilter} className='filterIcon'><AiOutlineFilter/></div>
         <div className='title'>
           <img src={logo} alt="" className='logo'/>
         </div>
-        <button onClick={openSort}> X </button>
+        <div onClick={openSort} className='sortIcon'><FiMenu/></div>
       </div>
 
       <div className={filterClass}>
-        <li>
-            Option 1
-        </li>
-        <li>
-            Option 2
-        </li>
+          <div className="color-menu">
+            <ColorMenu/>
+          </div>
       </div>
       <div className={sortClass}>
         <li>
