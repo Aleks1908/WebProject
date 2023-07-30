@@ -1,12 +1,13 @@
 import { useState } from 'react';
 import logo from './logo.png'
-import './navigation.css' ;
+import './navigation_mobile.css' ;
 import { AiOutlineFilter } from 'react-icons/ai';
 import { FiMenu } from 'react-icons/fi';
-import ColorMenu from './ColorMenu';
+import FilteringMenu from './FilteringMenu';
+import { SortingMenu } from './SortingMenu';
 
 
-export const Navigation = () => {
+export const NavigationMobile = () => {
   const [filterClass, setFilterClass] = useState('filter-not-visible')
   const [sortClass, setSortClass] = useState('sort-not-visible')
 
@@ -31,8 +32,8 @@ export const Navigation = () => {
 
   
   return(
-    <div>
-      <div className='navigation'>  
+    <div className='navigation'>
+      <div className='navigation-buttons'>  
         <div onClick={openFilter} className='filterIcon'><AiOutlineFilter/></div>
         <div className='title'>
           <img src={logo} alt="" className='logo'/>
@@ -41,17 +42,11 @@ export const Navigation = () => {
       </div>
 
       <div className={filterClass}>
-          <div className="color-menu">
-            <ColorMenu/>
-          </div>
+        <FilteringMenu/>
+          
       </div>
       <div className={sortClass}>
-        <li>
-          Option 3
-        </li>
-        <li>
-          Option 4
-        </li>
+        <SortingMenu/>
       </div>
     </div>
     );

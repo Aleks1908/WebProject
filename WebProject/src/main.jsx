@@ -1,9 +1,11 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import './index.css'
-import { Navigation } from './Components/Navigation/Navigation'
+import { NavBar } from './Components/Navigation/NavBar'
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <Navigation/>
+
+    <NavBar/>
+
   </React.StrictMode>,
 )
