@@ -1,0 +1,118 @@
+{
+    "products": [
+      {
+        "id": 1,
+        "name": "Product 1",
+        "description": "This is the description for Product 1.",
+        "price": 19.99,
+        "image": "",
+        "category": "shoes"
+      },
+      {
+        "id": 2,
+        "name": "Product 2",
+        "description": "This is the description for Product 2.",
+        "price": 29.99,
+        "image": "https://example.com/images/product2.jpg",
+        "category": "bags",
+        "stock": 50
+      },
+      {
+        "id": 3,
+        "name": "Product 3",
+        "description": "This is the description for Product 3.",
+        "price": 9.99,
+        "image": "https://example.com/images/product3.jpg",
+        "category": "shoes",
+        "stock": 75
+      },
+      {
+        "id": 4,
+        "name": "Product 1",
+        "description": "This is the description for Product 1.",
+        "price": 19.99,
+        "image": "",
+        "category": "shoes"
+      },{
+        "id": 5,
+        "name": "Product 1",
+        "description": "This is the description for Product 1.",
+        "price": 19.99,
+        "image": "",
+        "category": "shoes"
+      },{
+        "id": 6,
+        "name": "Product 1",
+        "description": "This is the description for Product 1.",
+        "price": 19.99,
+        "image": "",
+        "category": "shoes"
+      },{
+        "id": 7,
+        "name": "Product 1",
+        "description": "This is the description for Product 1.",
+        "price": 19.99,
+        "image": "",
+        "category": "shoes"
+      },{
+        "id": 8,
+        "name": "Product 1",
+        "description": "This is the description for Product 1.",
+        "price": 19.99,
+        "image": "",
+        "category": "shoes"
+      }
+      ,{
+        "id": 9,
+        "name": "Product 2",
+        "description": "This is the description for Product 2.",
+        "price": 29.99,
+        "image": "https://example.com/images/product2.jpg",
+        "category": "bags",
+        "stock": 50
+      },{
+        "id": 10,
+        "name": "Product 2",
+        "description": "This is the description for Product 2.",
+        "price": 29.99,
+        "image": "https://example.com/images/product2.jpg",
+        "category": "bags",
+        "stock": 50
+      },
+      {
+        "id": 11,
+        "name": "Product 2",
+        "description": "This is the description for Product 2.",
+        "price": 29.99,
+        "image": "https://example.com/images/product2.jpg",
+        "category": "bags",
+        "stock": 50
+      },{
+        "id": 12,
+        "name": "Product 2",
+        "description": "This is the description for Product 2.",
+        "price": 29.99,
+        "image": "https://example.com/images/product2.jpg",
+        "category": "bags",
+        "stock": 50
+      },
+      {
+        "id": 14,
+        "name": "Product 2",
+        "description": "This is the description for Product 2.",
+        "price": 29.99,
+        "image": "https://example.com/images/product2.jpg",
+        "category": "bags",
+        "stock": 50
+      },{
+        "id": 15,
+        "name": "Product 2",
+        "description": "This is the description for Product 2.",
+        "price": 29.99,
+        "image": "https://example.com/images/product2.jpg",
+        "category": "bags",
+        "stock": 50
+      }
+      
+    ]
+  }

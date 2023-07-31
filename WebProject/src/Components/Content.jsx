@@ -11,11 +11,12 @@ import { useState } from 'react';
 export const Content = () => {
     const isMobile = useMediaQuery({ query: '(max-width: 900px)' });
 
+    const [selectedDescription, setSelectedDescription] = useState('shoes');
     const [selectedCategory, setSelectedCategory] = useState('shoes');
 
     const handleCategoryClick = (category, description) => {
-      setSelectedCategory(description);
-      console.log(category)
+      setSelectedDescription(description);
+      setSelectedCategory(category);
     };
 
     if (!isMobile) {
@@ -28,11 +29,11 @@ export const Content = () => {
                     </div>
                     <div className='content_position'>
                         <div className='sorting_position'>
-                            <DescriptionSection selectedCategory={selectedCategory}/>
+                            <DescriptionSection selectedDescription={selectedDescription}/>
                             <SortSection/>
                         </div>
                         <div className='product_position'>
-                            <ProductSection/>
+                            <ProductSection selectedCategory={selectedCategory}/>
                         </div>
                         
                     </div>

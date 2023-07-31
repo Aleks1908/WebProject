@@ -1,9 +1,14 @@
-import shoe from "./shoe.jpeg"
 import "./product_section.css"
+import { useEffect, useState } from "react";
+
+
 
 
 // eslint-disable-next-line react/prop-types
 const Product = ({ name, description, img, stars, price }) => {
+
+
+    
     return (
       <div className="product_box">
         <div className="product_img">
@@ -29,21 +34,54 @@ const Product = ({ name, description, img, stars, price }) => {
       </div>
     );
   };
+  // eslint-disable-next-line react/prop-types
+  export const ProductSection = ({selectedCategory}) => {
+    const [products, setProducts] = useState([]);
+    const [productsToShow, setProductsToShow] = useState(5);
 
-export const ProductSection = () => {
-    return(
-        <div className="product_section">
-            <h1>Product</h1>
-            <div className="product_grid">
-                <Product name="Nike Jordan" description="Nice shoes" img={shoe} price = '200' stars= "5" />
-                <Product name="Nike Jordan" description="Nice shoes" img={shoe} price = '200' stars= "5" />
-                <Product name="Nike Jordan" description="Nice shoes" img={shoe} price = '200' stars= "5" />
-                <Product name="Nike Jordan" description="Nice shoes" img={shoe} price = '200' stars= "5" />
-                <Product name="Nike Jordan" description="Nice shoes" img={shoe} price = '200' stars= "5" />
-                <Product name="Nike Jordan" description="Nice shoes" img={shoe} price = '200' stars= "5" />
-                <Product name="Nike Jordan" description="Nice shoes" img={shoe} price = '200' stars= "5" />
+  
+    useEffect(() => {
+      // Fetch the JSON data when the component mounts
+      fetch('/SampleData.json')
+        .then((response) => response.json())
+        .then((data) => setProducts(data.products))
+        .catch((error) => console.error('Error fetching data:', error));
+    }, []);
+  
+    // Define the categories you want to display
+  
+    // Filter products based on their categories
+    const filteredProducts = products.filter((product) =>
+    // eslint-disable-next-line react/prop-types
+    selectedCategory.includes(product.category)
+    );
 
-            </div>
+    const limitedProducts = filteredProducts.slice(0, productsToShow);
+
+    const handleLoadMore = () => {
+      setProductsToShow(prevProductsToShow => prevProductsToShow + 5);
+    };
+  
+    return (
+      <div className="product_section">
+        <h1>Product</h1>
+        <div className="product_grid">
+          {/* Map through filtered products and render Product component for each product */}
+          {limitedProducts.map((product) => (
+            <Product
+              key={product.id}
+              name={product.name}
+              description={product.description}
+              img={product.image}
+              stars={product.stars}
+              price={product.price}
+            />
+          ))}
         </div>
-    )
-}
+        {productsToShow < filteredProducts.length && (
+        <button onClick={handleLoadMore}>Load More</button>
+      )}
+      </div>
+    );
+  };
+  
