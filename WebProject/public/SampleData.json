@@ -6,7 +6,8 @@
         "description": "This is the description for Product 1.",
         "price": 19.99,
         "image": "",
-        "category": "shoes"
+        "category": "shoes",
+        "color": "red"
       },
       {
         "id": 2,

@@ -13,16 +13,27 @@ export const Content = () => {
 
     const [selectedDescription, setSelectedDescription] = useState('shoes');
     const [selectedCategory, setSelectedCategory] = useState('shoes');
+    const [filteredState, setFilteredState] = useState('');
+    // const [sortedState, setSortedState] = useState('');
 
     const handleCategoryClick = (category, description) => {
       setSelectedDescription(description);
       setSelectedCategory(category);
     };
+    const handleFilterClick = (selectedColor, selectedMinPrice, selectedMaxPrice) => {
+        setFilteredState({
+          color: selectedColor,
+          minPrice: selectedMinPrice,
+          maxPrice: selectedMaxPrice
+        });
+      };
+      
 
     if (!isMobile) {
         return(
             <div>
                 <NavigationDesktop onCategoryClick={handleCategoryClick}/>
+                
                 <div className='plp'>
                     <div className='filter_position'>
                         <FilterSection/>
@@ -33,7 +44,7 @@ export const Content = () => {
                             <SortSection/>
                         </div>
                         <div className='product_position'>
-                            <ProductSection selectedCategory={selectedCategory}/>
+                            <ProductSection selectedCategory={selectedCategory} />
                         </div>
                         
                     </div>
@@ -44,8 +55,10 @@ export const Content = () => {
     } else {
         return (
             <div>
-                <NavigationMobile/>
-                <Category/>
+                <NavigationMobile handleFilterClick={handleFilterClick} />
+                <Category onCategoryClick={handleCategoryClick}/>
+                <ProductSection selectedCategory={selectedCategory} filteredState={filteredState}/>
+
             </div>
         )
     }

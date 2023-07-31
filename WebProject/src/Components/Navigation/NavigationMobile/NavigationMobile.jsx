@@ -7,7 +7,8 @@ import FilteringMenu from './FilteringMenu';
 import { SortingMenu } from './SortingMenu';
 
 
-export const NavigationMobile = () => {
+// eslint-disable-next-line react/prop-types
+export const NavigationMobile = ({handleFilterClick}) => {
   const [filterClass, setFilterClass] = useState('filter-not-visible')
   const [sortClass, setSortClass] = useState('sort-not-visible')
 
@@ -30,6 +31,7 @@ export const NavigationMobile = () => {
     }
   }
 
+
   
   return(
     <div className='navigation'>
@@ -42,7 +44,7 @@ export const NavigationMobile = () => {
       </div>
 
       <div className={filterClass}>
-        <FilteringMenu/>
+        <FilteringMenu onFilterClick={handleFilterClick}/>
           
       </div>
       <div className={sortClass}>

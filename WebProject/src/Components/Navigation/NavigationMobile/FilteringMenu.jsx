@@ -9,12 +9,17 @@ const ColorCircle = ({ color, onClick, selected }) => (
     />
   );
   
-  const FilteringMenu = () => {
+  // eslint-disable-next-line react/prop-types
+  const FilteringMenu = ({onFilterClick}) => {
     const [selectedColor, setSelectedColor] = useState('');
     const [minPrice, setMinPrice] = useState('');
     const [maxPrice, setMaxPrice] = useState('');
     const [isFilterDisabled, setIsFilterDisabled] = useState(true);
   
+    const handleFilterClick = (selectedColor, selectedMinPrice, selectedMaxPrice) => {
+      onFilterClick(selectedColor, selectedMinPrice, selectedMaxPrice);
+    };
+
     useEffect(() => {
       updateFilterButton();
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -36,12 +41,12 @@ const ColorCircle = ({ color, onClick, selected }) => (
       setIsFilterDisabled(!(selectedColor && minPrice && maxPrice));
     };
   
-    const handleFilterClick = () => {
-      console.log(`Selected Color: ${selectedColor}`);
-      console.log(`Min Price: ${minPrice}, Max Price: ${maxPrice}`);
-      // Add your filtering logic here based on color, minPrice, and maxPrice
-      // ...
-    };
+    // const handleFilterClick = () => {
+    //   console.log(`Selected Color: ${selectedColor}`);
+    //   console.log(`Min Price: ${minPrice}, Max Price: ${maxPrice}`);
+    //   // Add your filtering logic here based on color, minPrice, and maxPrice
+    //   // ...
+    // };
   
     return (
       <div className="filter-menu">
@@ -117,9 +122,10 @@ const ColorCircle = ({ color, onClick, selected }) => (
                 onChange={handleMaxPriceChange}
             />
         </div>
-          <button onClick={handleFilterClick} disabled={isFilterDisabled}>
-            Filter
-          </button>
+        <button onClick={() => handleFilterClick(selectedColor, minPrice, maxPrice)} disabled={isFilterDisabled}>
+          Filter
+        </button>
+
         </div>
       </div>
     );

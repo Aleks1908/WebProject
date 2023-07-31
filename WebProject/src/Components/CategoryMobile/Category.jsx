@@ -2,32 +2,30 @@ import './category.css'
 import shoe from './shoe.jpeg'
 
 // eslint-disable-next-line react/prop-types
-const CategoryIcon = ({ img, category, onClick }) => (
+const CategoryIcon = ({ img,  category, description, onClick }) => (
   <div
     className="category-option"
-    onClick={() => onClick(category)}>
+    onClick={() => onClick(category, description)}>
     <img src={img} alt="" />
   </div>
   
 );
 
 
-export const Category = () => {
-  const handleColorClick = (selectedCategory) => {
-    console.log(`Filtering by category: ${selectedCategory}`);
-    // Add your filtering logic here
-    // For example, you can update the state with the selected color and use it to filter items in your content
-    // ...
-  };
+// eslint-disable-next-line react/prop-types
+export const Category = ({onCategoryClick}) => {
+  const handleCategoryClick =  (category, description) => {
+    onCategoryClick(category, description);
+    };
 
   return (
     <div className="category-menu">
-      <CategoryIcon onClick={handleColorClick} img={shoe}/>
-      <CategoryIcon onClick={handleColorClick} img={shoe}/>
-      <CategoryIcon onClick={handleColorClick} img={shoe}/>
-      <CategoryIcon onClick={handleColorClick} img={shoe}/>
-      <CategoryIcon onClick={handleColorClick} img={shoe}/>
-      <CategoryIcon onClick={handleColorClick} img={shoe}/>
+      <CategoryIcon onClick={handleCategoryClick} img={shoe} category="shoes" description = "Description for shoes"/>
+      <CategoryIcon onClick={handleCategoryClick} img={shoe} category="bags" description = "Description for bags"/>
+      <CategoryIcon onClick={handleCategoryClick} img={shoe}/>
+      <CategoryIcon onClick={handleCategoryClick} img={shoe}/>
+      <CategoryIcon onClick={handleCategoryClick} img={shoe}/>
+      <CategoryIcon onClick={handleCategoryClick} img={shoe}/>
     </div>
   );
 };
