@@ -22,7 +22,7 @@ export const Category = () => {
 
   return (
     <div className="category-menu">
-      <CategoryIcon onClick={handleColorClick} img={shoe} category="shoes"/>
+      <CategoryIcon onClick={handleColorClick} img={shoe}/>
       <CategoryIcon onClick={handleColorClick} img={shoe}/>
       <CategoryIcon onClick={handleColorClick} img={shoe}/>
       <CategoryIcon onClick={handleColorClick} img={shoe}/>

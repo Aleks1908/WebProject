@@ -1,0 +1,21 @@
+.product_grid{
+    display: flex;
+    flex-wrap: wrap;
+
+}
+.product_grid .product_box{
+    margin: 0 2%;
+    width: 300px;
+    height: 400px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    background-color: aliceblue;
+    padding-top: 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+.product_info{
+    display: flex;
+    align-items: center;
+}
