@@ -1,11 +1,11 @@
+/* eslint-disable react/prop-types */
 
-export const SortingMenu = () => {
+export const SortingMenu = ({onSortClick}) => {
 
       
         // Function to handle dropdown change
         const handleSortChange = (event) => {
-          const selectedValue = event.target.value;
-          console.log('Selected Sort Option:', selectedValue); // Log the selected value to the console
+          onSortClick(event.target.value);
         }
         
 

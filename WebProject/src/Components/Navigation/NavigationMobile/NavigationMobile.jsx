@@ -8,7 +8,7 @@ import { SortingMenu } from './SortingMenu';
 
 
 // eslint-disable-next-line react/prop-types
-export const NavigationMobile = ({handleFilterClick}) => {
+export const NavigationMobile = ({handleFilterClick, handleSortClick}) => {
   const [filterClass, setFilterClass] = useState('filter-not-visible')
   const [sortClass, setSortClass] = useState('sort-not-visible')
 
@@ -48,7 +48,7 @@ export const NavigationMobile = ({handleFilterClick}) => {
           
       </div>
       <div className={sortClass}>
-        <SortingMenu/>
+        <SortingMenu onSortClick={handleSortClick}/>
       </div>
     </div>
     );

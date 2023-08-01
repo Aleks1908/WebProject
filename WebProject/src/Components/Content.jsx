@@ -14,7 +14,7 @@ export const Content = () => {
     const [selectedDescription, setSelectedDescription] = useState('shoes');
     const [selectedCategory, setSelectedCategory] = useState('shoes');
     const [filteredState, setFilteredState] = useState('');
-    // const [sortedState, setSortedState] = useState('');
+    const [sortedState, setSortedState] = useState('');
 
     const handleCategoryClick = (category, description) => {
       setSelectedDescription(description);
@@ -27,7 +27,9 @@ export const Content = () => {
           maxPrice: selectedMaxPrice
         });
       };
-      
+      const handleSortClick = (sort) => {
+        setSortedState(sort);
+      }
 
     if (!isMobile) {
         return(
@@ -55,9 +57,9 @@ export const Content = () => {
     } else {
         return (
             <div>
-                <NavigationMobile handleFilterClick={handleFilterClick} />
+                <NavigationMobile handleFilterClick={handleFilterClick} handleSortClick={handleSortClick}/>
                 <Category onCategoryClick={handleCategoryClick}/>
-                <ProductSection selectedCategory={selectedCategory} filteredState={filteredState}/>
+                <ProductSection selectedCategory={selectedCategory} filteredState={filteredState} sortedState={sortedState}/>
 
             </div>
         )
