@@ -2,7 +2,7 @@
 export const DescriptionSection = ({ selectedDescription }) => {
     return (
       <div className="description_section">
-        <p>Description of {selectedDescription}</p>
+        <p>{selectedDescription}</p>
       </div>
     );
   };

@@ -3,7 +3,7 @@ import logo from './logo.png'
 import './navigation_mobile.css' ;
 import { AiOutlineFilter } from 'react-icons/ai';
 import { FiMenu } from 'react-icons/fi';
-import FilteringMenu from './FilteringMenu';
+import FilteringMenu from '../../FilterSection/FilteringMenu';
 import { SortingMenu } from './SortingMenu';
 
 

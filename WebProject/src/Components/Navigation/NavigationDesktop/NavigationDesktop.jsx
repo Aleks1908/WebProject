@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import "./navigation_desktop.css";
 import logo from "./logo.png";
 
@@ -7,7 +8,7 @@ const CategoryLink = ({ category, description, onClick }) => (
     className="category_option_desk"
     onClick={() => onClick(category, description)}
   >
-    <p>{category}</p>
+      <a>{category.toUpperCase()}</a>
   </div>
 );
 
@@ -23,7 +24,7 @@ export const NavigationDesktop = ({ onCategoryClick }) => {
         <img src={logo} alt="" />
       </div>
       <div className="category_desk">
-        <CategoryLink onClick={handleCategoryClick} category="shoes" description = "Description for shoes"/>
+        <CategoryLink onClick={handleCategoryClick} category="shoes" description = "The shoe category refers to a wide range of footwear products designed to be worn on the feet for various purposes. Shoes are essential accessories that provide protection, support, and comfort during daily activities and special occasions. They come in diverse styles, designs, and materials, catering to different needs and fashion preferences."/>
         <CategoryLink onClick={handleCategoryClick} category="bags" description = "Description for bags"/>
         <CategoryLink onClick={handleCategoryClick} category="shirts" description = "Description for shirts"/>
         <CategoryLink onClick={handleCategoryClick} category="shorts" description = "Description for shorts"/>

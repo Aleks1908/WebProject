@@ -1,12 +1,14 @@
 import { NavigationMobile } from './Navigation/NavigationMobile/NavigationMobile';
 import {NavigationDesktop} from './Navigation/NavigationDesktop/NavigationDesktop'
 import { Category } from './CategoryMobile/Category';
-import { FilterSection } from './FilterSection/FilterDesktop';
+import { BannerSection } from './BannerSection/BannerSection';
+// import { FilterSection } from './FilterSection/FilterDesktop';
 import { DescriptionSection } from './DescriptionSection/DescriptionDesktop';
 import { SortSection } from './SortSection/SortSection';
 import { ProductSection } from './ProductSection/ProductSection';
 import { useMediaQuery } from 'react-responsive';
 import './content.css';
+import FilteringMenu from './FilterSection/FilteringMenu';
 import { useState } from 'react';
 export const Content = () => {
     const isMobile = useMediaQuery({ query: '(max-width: 900px)' });
@@ -35,10 +37,11 @@ export const Content = () => {
         return(
             <div>
                 <NavigationDesktop onCategoryClick={handleCategoryClick}/>
+                <BannerSection/>
                 
                 <div className='plp'>
                     <div className='filter_position'>
-                        <FilterSection/>
+                        <FilteringMenu onFilterClick={handleFilterClick}/>
                     </div>
                     <div className='content_position'>
                         <div className='sorting_position'>
@@ -46,7 +49,7 @@ export const Content = () => {
                             <SortSection/>
                         </div>
                         <div className='product_position'>
-                            <ProductSection selectedCategory={selectedCategory} />
+                            <ProductSection selectedCategory={selectedCategory}  filteredState={filteredState}/>
                         </div>
                         
                     </div>
@@ -60,7 +63,6 @@ export const Content = () => {
                 <NavigationMobile handleFilterClick={handleFilterClick} handleSortClick={handleSortClick}/>
                 <Category onCategoryClick={handleCategoryClick}/>
                 <ProductSection selectedCategory={selectedCategory} filteredState={filteredState} sortedState={sortedState}/>
-
             </div>
         )
     }
