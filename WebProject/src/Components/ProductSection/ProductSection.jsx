@@ -54,8 +54,20 @@ export const ProductSection = ({ selectedCategory, filteredState, sortedState })
   let limitedProducts = categorisedProducts.slice(0, productsToShow);
 
   if(sortedState){
-    // limitedProducts = [...limitedProducts].sort((a, b) => b.price - a.price);
-    limitedProducts = [...limitedProducts].sort((a, b) => b.name.localeCompare(a.name));
+
+    if(sortedState === "price-asc"){
+      limitedProducts = [...limitedProducts].sort((a, b) => a.price - b.price);
+    }
+    if(sortedState === "price-des"){
+      limitedProducts = [...limitedProducts].sort((a, b) => b.price - a.price);
+    }
+    if(sortedState === "alphabetical"){
+      limitedProducts = [...limitedProducts].sort((a, b) => a.name.localeCompare(b.name));
+    }
+    if(sortedState === "alphabetical-rev"){
+      limitedProducts = [...limitedProducts].sort((a, b) => b.name.localeCompare(a.name));
+
+    }
 
   }
 

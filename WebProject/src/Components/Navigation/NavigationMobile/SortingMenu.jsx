@@ -15,7 +15,9 @@ export const SortingMenu = ({onSortClick}) => {
       <select id="sort-options" onChange={handleSortChange}>
         <option value="">Select an option</option>
         <option value="alphabetical">Alphabetical</option>
+        <option value="alphabetical-rev">Reversed alphabetical</option>
         <option value="price-asc">Price (Low to High)</option>
+        <option value="price-des">Price (High to Low)</option>
       </select>
     </div>
     )
