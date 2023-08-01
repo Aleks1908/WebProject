@@ -40,7 +40,6 @@ export const ProductSection = ({ selectedCategory, filteredState, sortedState })
       .then((response) => response.json())
       .then((data) => setProducts(data.products))
       .catch((error) => console.error('Error fetching data:', error));
-      console.log(sortedState)
   }, [selectedCategory, filteredState, sortedState]);
 
   // Filter products based on their categories and selected color

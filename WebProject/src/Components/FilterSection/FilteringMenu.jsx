@@ -36,8 +36,6 @@ const FilteringMenu = ({ onFilterClick }) => {
   const handleColorClick = (color, hexcolor) => {
     setSelectedColor(color);
     setSelectedHexColor(hexcolor);
-    console.log(selectedHexColor)
-
   };
 
 const handleMinPriceChange = (e) => {
