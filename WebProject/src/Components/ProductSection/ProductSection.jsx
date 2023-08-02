@@ -25,19 +25,17 @@ const Product = ({ name, description, img, stars, price, sale }) => {
       <div className="product_stars">
         <Stars count={stars} />
       </div>
-      <div className="product_info">
-        <div className={`product_price ${hasSale ? "sale" : ""}`}>
-          {hasSale && (
-            <>
-              <p className="original_price">${price}</p>
-              <p className="discounted_price">${sale}</p>
-            </>
-          )}
-          {!hasSale && <p>${price}</p>}
-        </div>
-        <div className="buy_btn">
-          <a href="">Buy Now</a>
-        </div>
+      <div className={`product_price ${hasSale ? "sale" : ""}`}>
+        {hasSale && (
+          <>
+            <p className="discounted_price">${sale}</p>
+            <p className="original_price">${price}</p>
+          </>
+        )}
+        {!hasSale && <p>${price}</p>}
+      </div>
+      <div className="buy_btn">
+        <a href="">Buy Now</a>
       </div>
     </div>
   );
@@ -83,12 +81,33 @@ export const ProductSection = ({ selectedCategory, filteredState, sortedState })
   }));
 
   // Filter products based on their categories, selected color, and effectivePrice
-  let categorisedProducts = productsWithEffectivePrice.filter((product) =>
-    selectedCategory.includes(product.category) &&
-    (!filteredState || product.color === filteredState.color) &&
-    (!filteredState || product.effectivePrice >= filteredState.minPrice) &&
-    (!filteredState || product.effectivePrice <= filteredState.maxPrice)
-  );
+  let categorisedProducts = productsWithEffectivePrice.filter((product) => {
+
+    if (!selectedCategory.includes(product.category)) {
+      return false;
+    }
+  
+    if (filteredState.color && product.color !== filteredState.color) {
+      return false;
+    }
+
+    if (
+      filteredState.minPrice &&
+      product.effectivePrice < filteredState.minPrice
+    ) {
+      return false;
+    }
+  
+    if (
+      filteredState.maxPrice &&
+      product.effectivePrice > filteredState.maxPrice
+    ) {
+      return false;
+    }
+  
+    return true;
+  });
+  
 
   let limitedProducts = categorisedProducts.slice(0, productsToShow);
 
@@ -110,6 +129,14 @@ export const ProductSection = ({ selectedCategory, filteredState, sortedState })
   const handleLoadMore = () => {
     setProductsToShow(prevProductsToShow => prevProductsToShow + 5);
   };
+  
+  if (limitedProducts.length === 0) {
+    return (
+      <div className="product_section">
+        <h1>No products to display</h1>
+      </div>
+    );
+  }
 
   return (
     <div className="product_section">
@@ -129,7 +156,9 @@ export const ProductSection = ({ selectedCategory, filteredState, sortedState })
         ))}
       </div>
       {productsToShow < categorisedProducts.length && (
-        <button onClick={handleLoadMore}>Load More</button>
+        <div className="load_more">
+          <button  onClick={handleLoadMore}>Load More</button>
+        </div>
       )}
     </div>
   );

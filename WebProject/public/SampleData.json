@@ -5,19 +5,89 @@
         "name": "Product 1",
         "description": "This is the description for Product 1.",
         "price": 19.99,
-        "image": "./shoe.jpeg",
+        "image": "./shoe4.png",
         "category": "shoes",
         "color": "red",
         "stars": 3,
         "sale": 3
       },
-      
+      {
+        "id": 1,
+        "name": "Product 1",
+        "description": "This is the description for Product 1.",
+        "price": 19.99,
+        "image": "./shoe4.png",
+        "category": "shoes",
+        "color": "red",
+        "stars": 3,
+        "sale": 3
+      },{
+        "id": 1,
+        "name": "Product 1",
+        "description": "This is the description for Product 1.",
+        "price": 19.99,
+        "image": "./shoe4.png",
+        "category": "shoes",
+        "color": "red",
+        "stars": 3,
+        "sale": 3
+      },{
+        "id": 1,
+        "name": "Product 1",
+        "description": "This is the description for Product 1.",
+        "price": 19.99,
+        "image": "./shoe4.png",
+        "category": "shoes",
+        "color": "red",
+        "stars": 3,
+        "sale": 3
+      },{
+        "id": 1,
+        "name": "Product 1",
+        "description": "This is the description for Product 1.",
+        "price": 19.99,
+        "image": "./shoe4.png",
+        "category": "shoes",
+        "color": "red",
+        "stars": 3,
+        "sale": 3
+      },{
+        "id": 1,
+        "name": "Product 1",
+        "description": "This is the description for Product 1.",
+        "price": 19.99,
+        "image": "./shoe4.png",
+        "category": "shoes",
+        "color": "red",
+        "stars": 3,
+        "sale": 3
+      },{
+        "id": 1,
+        "name": "Product 1",
+        "description": "This is the description for Product 1.",
+        "price": 19.99,
+        "image": "./shoe4.png",
+        "category": "shoes",
+        "color": "red",
+        "stars": 3,
+        "sale": 3
+      },{
+        "id": 1,
+        "name": "Product 1",
+        "description": "This is the description for Product 1.",
+        "price": 19.99,
+        "image": "./shoe4.png",
+        "category": "shoes",
+        "color": "red",
+        "stars": 3,
+        "sale": 3
+      },
       {
         "id": 2,
         "name": "Product 2",
         "description": "This is the description for Product 2.",
         "price": 29.99,
-        "image": "https://example.com/images/product2.jpg",
+        "image": "./shoe2/webp",
         "category": "bags",
         "stock": 50,
         "discountedPrice": 9.99
@@ -27,16 +97,19 @@
         "name": "Product 3",
         "description": "This is the description for Product 3.",
         "price": 9.99,
-        "image": "https://example.com/images/product3.jpg",
+        "image": "./shoe4.png",
         "category": "shoes",
-        "stock": 75
+        "stock": 75,
+        "stars": 3
       },
       {
         "id": 4,
         "name": "Product 1",
         "description": "This is the description for Product 1.",
         "price": 19.99,
-        "image": "",
+        "image": "./shoe4.png",
+        "stars": 3,
+
         "category": "shoes"
       },{
         "id": 5,

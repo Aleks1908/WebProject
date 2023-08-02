@@ -7,11 +7,12 @@
 .filter-visible,
 .sort-visible {
     animation: slideIn ease-in-out 0.5s;
-    position: fixed;
+    position: absolute;
     background-color: rgba(237, 237, 237, 0.9); 
     backdrop-filter: blur(5px);
     z-index: 99;
     width: 100%;
+    transform: translateZ(0); 
 }
 
 .navigation{
@@ -36,7 +37,7 @@
 }
 
 .logo{
-    width: 125px;
+    width: 115px;
     height: auto;
 }
 
@@ -70,25 +71,24 @@
     }
 }
 
-
-  /* .price-selection .dash{
-    margin-left: 5px;
-    margin-right: 5px;
-  } */
-
-  .filter-menu button{
+.filter-menu button{
     all: unset;
     background-color: red;
     padding: 5px 10px;
     border-radius: 4px;
     margin-bottom: 10px;
     font-size: 18px;
-  }
+}
 
-  .filter-menu button:disabled{
+.filter-menu button:disabled{
     opacity: 0.3;
 }
 
 .sort-container{
     padding: 5% 0% ;
+}
+
+.full_navigation{
+    position: sticky;
+    top: 0;
 }

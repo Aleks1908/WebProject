@@ -2,7 +2,6 @@ import { NavigationMobile } from './Navigation/NavigationMobile/NavigationMobile
 import {NavigationDesktop} from './Navigation/NavigationDesktop/NavigationDesktop'
 import { Category } from './CategoryMobile/Category';
 import { BannerSection } from './BannerSection/BannerSection';
-// import { FilterSection } from './FilterSection/FilterDesktop';
 import { DescriptionSection } from './DescriptionSection/DescriptionDesktop';
 import { SortSection } from './SortSection/SortSection';
 import { ProductSection } from './ProductSection/ProductSection';

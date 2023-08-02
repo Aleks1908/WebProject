@@ -34,22 +34,25 @@ export const NavigationMobile = ({handleFilterClick, handleSortClick}) => {
 
   
   return(
-    <div className='navigation'>
-      <div className='navigation-buttons'>  
-        <div onClick={openFilter} className='filterIcon'><AiOutlineFilter/></div>
-        <div className='title'>
-          <img src={logo} alt="" className='logo'/>
-        </div>
-        <div onClick={openSort} className='sortIcon'><FiMenu/></div>
-      </div>
+    <div className='full_navigation'>
+        <div className='navigation'>
+          <div className='navigation-buttons'>  
+            <div onClick={openFilter} className='filterIcon'><AiOutlineFilter/></div>
+            <div className='title'>
+              <img src={logo} alt="" className='logo'/>
+            </div>
+            <div onClick={openSort} className='sortIcon'><FiMenu/></div>
+          </div>
 
-      <div className={filterClass}>
-        <FilteringMenu onFilterClick={handleFilterClick}/>
-          
-      </div>
-      <div className={sortClass}>
-        <SortingMenu onSortClick={handleSortClick}/>
-      </div>
+          <div className={filterClass}>
+            <FilteringMenu onFilterClick={handleFilterClick}/>
+              
+          </div>
+          <div className={sortClass}>
+            <SortingMenu onSortClick={handleSortClick}/>
+          </div>
+        </div>
     </div>
+    
     );
 };

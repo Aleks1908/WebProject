@@ -1,3 +1,5 @@
+import './sort_section.css'
+
 export const SortSection = () => {
     return (
         <div className="sort_desk">
