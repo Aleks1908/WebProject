@@ -7,8 +7,11 @@
         "price": 19.99,
         "image": "./shoe.jpeg",
         "category": "shoes",
-        "color": "red"
+        "color": "red",
+        "stars": 3,
+        "sale": 3
       },
+      
       {
         "id": 2,
         "name": "Product 2",
@@ -16,7 +19,8 @@
         "price": 29.99,
         "image": "https://example.com/images/product2.jpg",
         "category": "bags",
-        "stock": 50
+        "stock": 50,
+        "discountedPrice": 9.99
       },
       {
         "id": 3,

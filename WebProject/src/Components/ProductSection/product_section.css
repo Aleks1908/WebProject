@@ -19,3 +19,26 @@
     display: flex;
     align-items: center;
 }
+
+.star svg{
+    width: 2em !important;
+    height: 3em !important;
+}
+
+.product_name{
+    align-self: flex-start;
+    margin-left: 4%;
+    margin-top: 5%;
+}
+.product_name p{
+    margin: 0 !important;
+}
+
+.product_description{
+    align-self: flex-start;
+    margin-left: 4%;
+}
+
+.product_image img{
+    border-radius: 5px;
+}

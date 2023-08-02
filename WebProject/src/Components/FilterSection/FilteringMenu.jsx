@@ -39,7 +39,7 @@ const FilteringMenu = ({ onFilterClick }) => {
   };
 
 const handleMinPriceChange = (e) => {
-  const newMinPrice = e.target.value ? Number(e.target.value) : ''; // Handle empty input
+  const newMinPrice = e.target.value ? Number(e.target.value) : ''; 
 
   if (newMinPrice === '') {
     setMinPrice(newMinPrice);
@@ -133,8 +133,8 @@ const handleMaxPriceChange = (e) => {
       </div>
       <div className="price-menu">
       <div className="filter-title">
-                <p>Filter by Price</p>
-            </div>
+            <p>Filter by Price</p>
+      </div>
         <div className="price-input">
           <div className="field">
             <span>Min</span>
@@ -167,7 +167,7 @@ const handleMaxPriceChange = (e) => {
             <input
               type="range"
               className="range-min"
-             
+              
               max={rangeInputMax}
               value={minPrice}
               onChange={handleMinPriceChange}

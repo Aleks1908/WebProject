@@ -24,14 +24,14 @@ export const Content = () => {
     };
     const handleFilterClick = (selectedColor, selectedMinPrice, selectedMaxPrice) => {
         setFilteredState({
-          color: selectedColor,
-          minPrice: selectedMinPrice,
-          maxPrice: selectedMaxPrice
+            color: selectedColor,
+            minPrice: selectedMinPrice,
+            maxPrice: selectedMaxPrice
         });
-      };
-      const handleSortClick = (sort) => {
+    };
+        const handleSortClick = (sort) => {
         setSortedState(sort);
-      }
+    }
 
     if (!isMobile) {
         return(
