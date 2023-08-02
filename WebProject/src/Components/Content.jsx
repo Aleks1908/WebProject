@@ -12,8 +12,11 @@ import { useState } from 'react';
 export const Content = () => {
     const isMobile = useMediaQuery({ query: '(max-width: 900px)' });
 
-    const [selectedDescription, setSelectedDescription] = useState('shoes');
+    
     const [selectedCategory, setSelectedCategory] = useState('shoes');
+    const [selectedDescription, setSelectedDescription] = useState(`The shoe category refers to a wide range of footwear products designed to be worn 
+    on the feet for various purposes. Shoes are essential accessories that provide protection, support, and comfort during daily activities and special 
+    occasions. They come in diverse styles, designs, and materials, catering to different needs and fashion preferences.`);
     const [filteredState, setFilteredState] = useState('');
     const [sortedState, setSortedState] = useState('');
 
@@ -45,10 +48,10 @@ export const Content = () => {
                     <div className='content_position'>
                         <div className='sorting_position'>
                             <DescriptionSection selectedDescription={selectedDescription}/>
-                            <SortSection/>
+                            <SortSection onSortClick={handleSortClick}/>
                         </div>
                         <div className='product_position'>
-                            <ProductSection selectedCategory={selectedCategory}  filteredState={filteredState}/>
+                            <ProductSection selectedCategory={selectedCategory}  filteredState={filteredState} sortedState={sortedState}/>
                         </div>
                         
                     </div>

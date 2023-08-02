@@ -4,7 +4,7 @@ import './description_section.css'
 
 export const DescriptionSection = ({ selectedDescription }) => {
     return (
-      <div className="description_section">
+      <div className="description_desk">
         <p>{selectedDescription}</p>
       </div>
     );

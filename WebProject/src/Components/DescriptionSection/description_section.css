@@ -1,3 +1,9 @@
-.description_section{
-    width: 80%;
+.description_desk{
+    display: flex;
+    align-items: center;
+    margin-right: 1%;
+}
+.description_desk p{
+    text-align: justify;
+    font-size: 18px;
 }
