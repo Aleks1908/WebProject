@@ -4,7 +4,7 @@ import './navigation_mobile.css' ;
 import { AiOutlineFilter } from 'react-icons/ai';
 import { FiMenu } from 'react-icons/fi';
 import FilteringMenu from '../../FilterSection/FilteringMenu';
-import {SortingMenu} from '../../SortSection/SortMobile/SortingMenu'
+import { SortSection } from '../../SortSection/SortSection';
 
 // eslint-disable-next-line react/prop-types
 export const NavigationMobile = ({handleFilterClick, handleSortClick}) => {
@@ -48,7 +48,7 @@ export const NavigationMobile = ({handleFilterClick, handleSortClick}) => {
               
           </div>
           <div className={sortClass}>
-            <SortingMenu onSortClick={handleSortClick}/>
+            <SortSection onSortClick={handleSortClick}/>
           </div>
         </div>
     </div>

@@ -4,6 +4,8 @@ p{
 .product_grid{
     display: flex;
     flex-wrap: wrap;
+    margin-top: 30px;
+
 
 }
 .product_grid .product_box{
@@ -13,9 +15,9 @@ p{
     align-items: center;
     display: flex;
     flex-direction: column;
-    background-color: aliceblue;
+    background-color: rgb(244, 244, 244);
     padding-top: 0.75%;
-    border-radius: 5px;
+    border-radius: 3px;
     margin-bottom: 20px;
 }
 .product_info{
@@ -93,8 +95,10 @@ p{
     width: 92%;
     display: flex;
     justify-content: center;
-    background-color: red;
-    border-radius: 10px;
+    background-color: #fff;
+    color: #000;
+    border: 1px solid #000;
+    border-radius: 4px;
 }
 
 .buy_btn a {
@@ -113,9 +117,11 @@ p{
 .load_more button {
     all: unset;
     cursor: pointer;
-    background-color: red;
+    color: #000;
+    border: 1px solid #000;
+    background-color: #fff;
     padding: 5px 60px;
-    border-radius: 5px;
+    border-radius: 3px;
     font-size: 1.3vw;
 }
 @media only screen and (max-width: 1400px){

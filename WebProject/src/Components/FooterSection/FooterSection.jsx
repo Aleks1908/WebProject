@@ -8,13 +8,19 @@ export const FooterSection = () => {
         <div className='footer_section'>
             <div className='social_media'>
                 <div className='social_media_icon'>
-                    <AiFillFacebook/>
+                    <a href='#facebook'>
+                        <AiFillFacebook/>
+                    </a>
                 </div>
                 <div className='social_media_icon'>
-                    <AiFillInstagram/>
+                    <a href="#instagram">
+                        <AiFillInstagram/>
+                    </a>
                 </div>
                 <div className='social_media_icon'>
-                    <AiOutlineTwitter/>
+                    <a href='#twitter'>
+                        <AiOutlineTwitter/>
+                    </a>
                 </div>
             </div>
             <div className='info'>

@@ -42,9 +42,6 @@ const Product = ({ name, description, img, stars, price, sale }) => {
 };
 
 
-
-
-
 const Stars = ({ count }) => {
   const filledStars = Array.from({ length: count }, (_, index) => (
     <span key={index} className="star filled"><AiFillStar/></span>
@@ -65,7 +62,7 @@ const Stars = ({ count }) => {
 
 export const ProductSection = ({ selectedCategory, filteredState, sortedState }) => {
   const [products, setProducts] = useState([]);
-  const [productsToShow, setProductsToShow] = useState(5);
+  const [productsToShow, setProductsToShow] = useState(20);
 
   useEffect(() => {
     fetch('/SampleData.json')
@@ -140,9 +137,7 @@ export const ProductSection = ({ selectedCategory, filteredState, sortedState })
 
   return (
     <div className="product_section">
-      <h1>Product</h1>
       <div className="product_grid">
-        {/* Map through filtered products and render Product component for each product */}
         {limitedProducts.map((product) => (
           <Product
             key={product.id}

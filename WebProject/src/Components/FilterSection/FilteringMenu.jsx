@@ -82,7 +82,7 @@ const FilteringMenu = ({ onFilterClick }) => {
 
 
   const rangeInputMax = 200;
-  const priceGap = 10;
+  const priceGap = 0;
 
   const calculateRangeLeft = () => {
     return (minPrice / rangeInputMax) * 100 + "%";

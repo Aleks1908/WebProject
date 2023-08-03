@@ -1,5 +1,6 @@
 .navigation_desk {
-    background-color: #000; 
+    background-color:rgb(23, 25, 26);
+    ; 
     backdrop-filter: blur(5px);
     display: flex;
     position: sticky;

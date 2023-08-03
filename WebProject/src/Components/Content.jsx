@@ -3,7 +3,7 @@ import {NavigationDesktop} from './Navigation/NavigationDesktop/NavigationDeskto
 import { Category } from './CategoryMobile/Category';
 import { BannerSection } from './BannerSection/BannerSection';
 import { DescriptionSection } from './DescriptionSection/DescriptionDesktop';
-import { SortSection } from './SortSection/SortDesktop/SortSection';
+import { SortSection } from './SortSection/SortSection';
 import { ProductSection } from './ProductSection/ProductSection';
 import { useMediaQuery } from 'react-responsive';
 import { FooterSection } from './FooterSection/FooterSection';
@@ -32,8 +32,9 @@ export const Content = () => {
             maxPrice: selectedMaxPrice
         });
     };
-        const handleSortClick = (sort) => {
-        setSortedState(sort);
+     
+    const handleSortClick = (sort) => {
+    setSortedState(sort);
     }
 
     if (!isMobile) {
@@ -65,9 +66,12 @@ export const Content = () => {
         return (
             <div>
                 <NavigationMobile handleFilterClick={handleFilterClick} handleSortClick={handleSortClick}/>
+                <BannerSection/>
+
                 <Category onCategoryClick={handleCategoryClick}/>
                 <DescriptionSection selectedDescription={selectedDescription} selectedCategory={selectedCategory}/>
                 <ProductSection selectedCategory={selectedCategory} filteredState={filteredState} sortedState={sortedState}/>
+                <FooterSection/>
             </div>
         )
     }

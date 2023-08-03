@@ -1,6 +1,7 @@
 .filter-menu {
     width: 100%;
     top: 8%;
+    margin-top: 10%;
     position: sticky;
 }
 .color-menu {
@@ -91,14 +92,14 @@ input[type="number"]::-webkit-inner-spin-button{
     align-items: center;
     justify-content: center;
 }
-.slider{
+.filter-menu .slider{
     height: 5px;
     background-color: #ddd;
     border-radius: 5px;
     position: relative;
     width: 80%;
 }
-.slider .progress{
+.filter-menu .slider .progress{
     height: 5px;
     border-radius: 5px;
     position: absolute;

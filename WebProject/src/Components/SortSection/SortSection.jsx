@@ -1,16 +1,16 @@
+import './sort_section.css'
 /* eslint-disable react/prop-types */
 
-export const SortingMenu = ({onSortClick}) => {
+export const SortSection = ({onSortClick}) => {
     const handleSortChange = (event) => {
     onSortClick(event.target.value);
   }
         
 
   return (
-      <div className="sort-container">
-    <label htmlFor="sort-options">Sort By:</label>
-    <select id="sort-options" onChange={handleSortChange}>
-      <option value="">Select an option</option>
+      <div className="sort_section">
+    <select id="sort_options" onChange={handleSortChange}>
+      <option value="">Sort by:</option>
       <option value="alphabetical">Alphabetical a-z</option>
       <option value="alphabetical-rev">Alphabetical z-a</option>
       <option value="price-asc">Price (Low to High)</option>
