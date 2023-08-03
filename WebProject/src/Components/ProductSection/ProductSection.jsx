@@ -8,7 +8,6 @@ import "./product_section.css";
 
 // eslint-disable-next-line react/prop-types
 const Product = ({ name, description, img, stars, price, sale }) => {
-  console.log(sale);
   const hasSale = typeof sale === "number" && sale < price;
 
   return (
