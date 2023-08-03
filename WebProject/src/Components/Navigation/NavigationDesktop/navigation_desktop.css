@@ -1,5 +1,5 @@
 .navigation_desk {
-    background-color: rgba(237, 237, 237, 0.9); 
+    background-color: #000; 
     backdrop-filter: blur(5px);
     display: flex;
     position: sticky;
@@ -10,7 +10,6 @@
     align-items: center;
     width: 6%;
     height: auto;
-    /* margin-left: 2%; */
 }
 .logo_desk img{
     height: auto;
@@ -35,9 +34,10 @@
     cursor: pointer;
     display: flex;
     align-items: center;
+    color: #fff;
 }
 .category_option_desk a:hover {
-    color: #91640F;
+    color: #000;
   }
 .category_option_desk a{
     height: 100%;
@@ -61,7 +61,7 @@
     height: 1px;
     content: '.';
     color: transparent;
-    background: #F1C40F;
+    background: #fff;
     visibility: none;
     opacity: 0;
     z-index: -1;

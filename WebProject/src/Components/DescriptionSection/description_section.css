@@ -2,8 +2,20 @@
     display: flex;
     align-items: center;
     margin-right: 1%;
+    flex-direction: column;
 }
 .description_desk p{
     text-align: justify;
     font-size: 18px;
+}
+
+@media only screen and (max-width: 900px) {
+    .description_desk{
+        width: 90% !important;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    .description_desk h1{
+        text-align: center;
+    }
 }

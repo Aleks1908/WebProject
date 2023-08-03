@@ -3,12 +3,13 @@ import {NavigationDesktop} from './Navigation/NavigationDesktop/NavigationDeskto
 import { Category } from './CategoryMobile/Category';
 import { BannerSection } from './BannerSection/BannerSection';
 import { DescriptionSection } from './DescriptionSection/DescriptionDesktop';
-import { SortSection } from './SortSection/SortSection';
+import { SortSection } from './SortSection/SortDesktop/SortSection';
 import { ProductSection } from './ProductSection/ProductSection';
 import { useMediaQuery } from 'react-responsive';
-import './content.css';
+import { FooterSection } from './FooterSection/FooterSection';
 import FilteringMenu from './FilterSection/FilteringMenu';
 import { useState } from 'react';
+import './content.css';
 export const Content = () => {
     const isMobile = useMediaQuery({ query: '(max-width: 900px)' });
 
@@ -57,6 +58,7 @@ export const Content = () => {
                     </div>
                    
                 </div>
+                <FooterSection/>
             </div>
             );
     } else {
@@ -64,6 +66,7 @@ export const Content = () => {
             <div>
                 <NavigationMobile handleFilterClick={handleFilterClick} handleSortClick={handleSortClick}/>
                 <Category onCategoryClick={handleCategoryClick}/>
+                <DescriptionSection selectedDescription={selectedDescription} selectedCategory={selectedCategory}/>
                 <ProductSection selectedCategory={selectedCategory} filteredState={filteredState} sortedState={sortedState}/>
             </div>
         )

@@ -4,8 +4,7 @@ import './navigation_mobile.css' ;
 import { AiOutlineFilter } from 'react-icons/ai';
 import { FiMenu } from 'react-icons/fi';
 import FilteringMenu from '../../FilterSection/FilteringMenu';
-import { SortingMenu } from './SortingMenu';
-
+import {SortingMenu} from '../../SortSection/SortMobile/SortingMenu'
 
 // eslint-disable-next-line react/prop-types
 export const NavigationMobile = ({handleFilterClick, handleSortClick}) => {
