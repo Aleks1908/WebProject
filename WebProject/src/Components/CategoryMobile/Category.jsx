@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import './category.css'
 import shoe from './shoe.jpeg'
 
@@ -7,6 +8,7 @@ const CategoryIcon = ({ img,  category, description, onClick }) => (
     className="category-option"
     onClick={() => onClick(category, description)}>
     <img src={img} alt="" />
+    <p>{category.toUpperCase()}</p>
   </div>
   
 );
@@ -22,10 +24,10 @@ export const Category = ({onCategoryClick}) => {
     <div className="category-menu">
       <CategoryIcon onClick={handleCategoryClick} img={shoe} category="shoes" description = "Description for shoes"/>
       <CategoryIcon onClick={handleCategoryClick} img={shoe} category="bags" description = "Description for bags"/>
-      <CategoryIcon onClick={handleCategoryClick} img={shoe}/>
-      <CategoryIcon onClick={handleCategoryClick} img={shoe}/>
-      <CategoryIcon onClick={handleCategoryClick} img={shoe}/>
-      <CategoryIcon onClick={handleCategoryClick} img={shoe}/>
+      <CategoryIcon onClick={handleCategoryClick} img={shoe} category="shirts" description = "Description for shirts"/>
+      <CategoryIcon onClick={handleCategoryClick} img={shoe} category="shorts" description = "Description for shorts"/>
+      <CategoryIcon onClick={handleCategoryClick} img={shoe} category="dresses" description = "Description for dresses"/>
+      <CategoryIcon onClick={handleCategoryClick} img={shoe} category="blazers" description = "Description for blazers"/>
     </div>
   );
 };

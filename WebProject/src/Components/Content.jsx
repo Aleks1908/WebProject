@@ -47,7 +47,7 @@ export const Content = () => {
                     </div>
                     <div className='content_position'>
                         <div className='sorting_position'>
-                            <DescriptionSection selectedDescription={selectedDescription}/>
+                            <DescriptionSection selectedDescription={selectedDescription} selectedCategory={selectedCategory}/>
                             <SortSection onSortClick={handleSortClick}/>
                         </div>
                         <div className='product_position'>

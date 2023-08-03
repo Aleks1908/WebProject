@@ -13,6 +13,10 @@
     border: 2px solid transparent;
   }
 
+  .category-option p{
+    text-align: center;
+  }
+
   .category-option img{
     width: 100%;
     height: 100%;

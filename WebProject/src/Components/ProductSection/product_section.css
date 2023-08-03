@@ -110,12 +110,12 @@ p{
     display: flex;
     justify-content: center;
 }
-.load_more button{
+.load_more button {
     all: unset;
     cursor: pointer;
     background-color: red;
-    padding: 5px 10px;
-    border-radius: 7px;
+    padding: 5px 60px;
+    border-radius: 2px;
     font-size: 1.7vw;
 }
 @media only screen and (max-width: 1400px){
@@ -128,11 +128,8 @@ p{
     }
 }
 @media only screen and (max-width: 1200px){
-    .filter_position{
-        width: 20% !important;
-    }
     .filter-menu{
-        width: 20%;
+        width: 100%;
     }
     .content_position{
         width: 80% !important;

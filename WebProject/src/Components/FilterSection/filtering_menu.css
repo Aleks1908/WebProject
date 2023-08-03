@@ -1,6 +1,7 @@
-.filter-menu{
-    position: fixed;
-    width: 12.5%;
+.filter-menu {
+    width: 100%;
+    top: 8%;
+    position: sticky;
 }
 .color-menu {
     display: flex;
@@ -142,6 +143,7 @@ input[type="range"]::-moz-range-thumb{
 
 .filter-menu button {
     margin-top: 20px;
+    cursor: pointer;
     /* background-color: blue; */
 }
 

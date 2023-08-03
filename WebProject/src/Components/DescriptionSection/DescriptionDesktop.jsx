@@ -2,9 +2,10 @@
 
 import './description_section.css'
 
-export const DescriptionSection = ({ selectedDescription }) => {
+export const DescriptionSection = ({ selectedDescription, selectedCategory }) => {
     return (
       <div className="description_desk">
+        <p>{selectedCategory}</p>
         <p>{selectedDescription}</p>
       </div>
     );
