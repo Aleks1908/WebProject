@@ -5,7 +5,7 @@ import shoe from './shoe.jpeg'
 // eslint-disable-next-line react/prop-types
 const CategoryIcon = ({ img,  category, description, onClick }) => (
   <div
-    className="category-option"
+    className="category_option"
     onClick={() => onClick(category, description)}>
     <img src={img} alt="" />
     <p>{category.toUpperCase()}</p>
@@ -21,7 +21,7 @@ export const Category = ({onCategoryClick}) => {
     };
 
   return (
-    <div className="category-menu">
+    <div className="category_menu">
       <CategoryIcon onClick={handleCategoryClick} img={shoe} category="shoes" description = "Description for shoes"/>
       <CategoryIcon onClick={handleCategoryClick} img={shoe} category="bags" description = "Description for bags"/>
       <CategoryIcon onClick={handleCategoryClick} img={shoe} category="shirts" description = "Description for shirts"/>

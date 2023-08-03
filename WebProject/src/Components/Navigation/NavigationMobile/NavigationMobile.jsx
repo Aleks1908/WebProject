@@ -35,7 +35,7 @@ export const NavigationMobile = ({handleFilterClick, handleSortClick}) => {
   return(
     <div className='full_navigation'>
         <div className='navigation'>
-          <div className='navigation-buttons'>  
+          <div className='navigation_buttons'>  
             <div onClick={openFilter} className='filterIcon'><AiOutlineFilter/></div>
             <div className='title'>
               <img src={logo} alt="" className='logo'/>

@@ -10,7 +10,7 @@ const ColorCircle = ({ color, hexcolor, onClick, selected }) => {
 
   return (
     <div
-      className={`color-option${selected ? " selected" : ""}`}
+      className={`color_option${selected ? " selected" : ""}`}
       style={{ backgroundColor: hexcolor }}
       onClick={handleColorClick}
     />
@@ -93,12 +93,12 @@ const FilteringMenu = ({ onFilterClick }) => {
   };
 
   return (
-    <div className="filter-menu">
-      <div className="color-menu">
-        <div className="filter-title">
+    <div className="filter_menu">
+      <div className="color_menu">
+        <div className="filter_title">
           <p>Filter by Color</p>
         </div>
-        <div className="color-selection">
+        <div className="color_selection">
           <ColorCircle
             color="red"
             hexcolor="#db362a"
@@ -143,25 +143,24 @@ const FilteringMenu = ({ onFilterClick }) => {
           />
         </div>
       </div>
-      <div className="price-menu">
-        <div className="filter-title">
+      <div className="price_menu">
+        <div className="filter_title">
           <p>Filter by Price</p>
         </div>
-        <div className="price-input">
+        <div className="price_input">
           <div className="field">
             <input
               type="number"
-              className="input-min"
+              className="input_min"
               name="minPrice"
               value={minPrice}
               onChange={handleMinPriceChange}
             />
           </div>
-          {/* <div className="separator">-</div> */}
           <div className="field">
             <input
               type="number"
-              className="input-max"
+              className="input_max"
               name="maxPrice"
               value={maxPrice}
               onChange={handleMaxPriceChange}
@@ -173,24 +172,24 @@ const FilteringMenu = ({ onFilterClick }) => {
             className="progress"
             style={{ left: calculateRangeLeft(), right: calculateRangeRight() }}
           ></div>
-          <div className="range-input">
+          <div className="range_input">
             <input
               type="range"
-              className="range-min"
+              className="range_min"
               max={rangeInputMax}
               value={minPrice}
               onChange={handleMinPriceChange}
             />
             <input
               type="range"
-              className="range-max"
+              className="range_max"
               max={rangeInputMax}
               value={maxPrice}
               onChange={handleMaxPriceChange}
             />
           </div>
         </div>
-        <div className="reset-button">
+        <div className="reset_button">
           <button onClick={handleResetFilters}>Reset Filters</button>
         </div>
       </div>

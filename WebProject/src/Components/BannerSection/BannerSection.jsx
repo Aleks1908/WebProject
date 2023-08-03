@@ -43,21 +43,8 @@ export const BannerSection = () => {
                     <div className='auto_btn4'></div>
                 </div>
             </div>
-            {/* <div className='navigation_manual'>
-                <label htmlFor="radio1" className='manual_btn'></label>
-                <label htmlFor="radio2" className='manual_btn'></label>
-                <label htmlFor="radio3" className='manual_btn'></label>
-                <label htmlFor="radio4" className='manual_btn'></label>
-            </div> */}
         </div>
     </div>
     )
 }
 
-// export const BannerSection = () => {
-//     return(
-//         <div className="imgSlider">
-            
-//         </div>
-//     )
-// }

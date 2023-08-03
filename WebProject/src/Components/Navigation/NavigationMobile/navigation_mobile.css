@@ -1,3 +1,8 @@
+.full_navigation{
+    position: sticky;
+    top: 0;
+}
+
 .filter-not-visible,
 .sort-not-visible{
     animation: slideOut ease-in-out 0.2s forwards;
@@ -20,7 +25,7 @@
     top: 0;
 }
 
-.navigation-buttons{
+.navigation_buttons{
     display: flex;
     width: 95%;
     padding-left: 2.5%;
@@ -72,14 +77,3 @@
 }
 
 
-
-.filter-menu button:disabled{
-    opacity: 0.3;
-}
-
-
-
-.full_navigation{
-    position: sticky;
-    top: 0;
-}
