@@ -101,9 +101,9 @@ const FilteringMenu = ({ onFilterClick }) => {
         <div className="color_selection">
         <ColorCircle
             color="white"
-            hexcolor="#e6e6e6"
+            hexcolor="#b3b3b3"
             onClick={handleColorClick}
-            selected={selectedHexColor === "#e6e6e6"}
+            selected={selectedHexColor === "#b3b3b3"}
           />
           <ColorCircle
             color="red"

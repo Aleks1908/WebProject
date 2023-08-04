@@ -152,8 +152,8 @@ export const ProductSection = ({ selectedCategory, filteredState, sortedState })
   
   if (limitedProducts.length === 0) {
     return (
-      <div className="product_section">
-        <h1>No products to display</h1>
+      <div className="product_section no_products">
+        <h1>No products are available for the selected filters</h1>
       </div>
     );
   }

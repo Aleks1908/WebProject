@@ -140,6 +140,13 @@ p{
     border-radius: 3px;
     font-size: 1.3vw;
 }
+
+.no_products{
+    height: 100%;
+    text-align: center;
+    margin: 150px 0;
+    font-size: 13px;
+}
 @media only screen and (max-width: 1400px){
     .product_grid .product_box {
         width: 23%;
@@ -161,7 +168,7 @@ p{
     }
     .product_grid .product_box {
         width: 31.1%;
-        height: 26.5vw;
+        height: 30vw;
     }
     .product_name p{
         font-size: 2vw;
