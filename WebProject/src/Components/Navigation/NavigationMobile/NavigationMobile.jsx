@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import logo from './logo.png'
+import logo from "../../../Assets/logo.png";
 import './navigation_mobile.css' ;
 import { AiOutlineFilter } from 'react-icons/ai';
 import { FiMenu } from 'react-icons/fi';

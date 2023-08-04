@@ -188,7 +188,7 @@ p{
 @media only screen and (max-width: 900px){
     .product_grid .product_box {
         width: 48%;
-        height: 58vw;
+        height: 66vw;
     }
     .product_img{
         height: 30vw;
@@ -211,5 +211,8 @@ p{
     }
     .load_more button{
         font-size: 4vw;
+    }
+    .notification{
+        font-size: 3vw;
     }
 }

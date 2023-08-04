@@ -1,7 +1,7 @@
 import './banner_section.css'
-import slide1 from './slide1.webp'
-import slide2 from './slide2.webp'
-import slide3 from './slide3.webp'
+import slide1 from '../../Assets/SliderImg/slide1.webp'
+import slide2 from '../../Assets/SliderImg/slide2.webp'
+import slide3 from '../../Assets/SliderImg/slide3.webp'
 export const BannerSection = () => {
 
     let counter = 1;

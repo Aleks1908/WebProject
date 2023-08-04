@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import "./navigation_desktop.css";
-import logo from "./logo.png";
+import logo from "../../../Assets/logo.png";
 
 // eslint-disable-next-line react/prop-types
 const CategoryLink = ({ category, description, onClick }) => (

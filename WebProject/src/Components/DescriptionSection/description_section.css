@@ -1,21 +1,30 @@
-.description_desk{
+.description_section{
     display: flex;
     align-items: center;
     margin-right: 1%;
     flex-direction: column;
 }
-.description_desk p{
+.description_section p{
     text-align: justify;
     font-size: 18px;
 }
 
 @media only screen and (max-width: 900px) {
-    .description_desk{
+    .description_section{
         width: 90% !important;
         margin-left: 5%;
         margin-right: 5%;
     }
-    .description_desk h1{
+    .description_section h1{
         text-align: center;
     }
+}
+
+@media only screen and (max-width: 300px){
+    .description_section h1 {
+        font-size: 20px;
+    } 
+    .description_section p {
+        font-size: 14px;
+    }   
 }
