@@ -128,6 +128,7 @@ p{
 .load_more{
     display: flex;
     justify-content: center;
+    margin-bottom: 20px;
 }
 .load_more button {
     all: unset;
