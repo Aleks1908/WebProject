@@ -20,7 +20,6 @@ const CategoryIcon = ({ img,  category, description, onClick }) => (
 );
 
 
-// eslint-disable-next-line react/prop-types
 export const Category = ({onCategoryClick}) => {
   const handleCategoryClick =  (category, description) => {
     onCategoryClick(category, description);

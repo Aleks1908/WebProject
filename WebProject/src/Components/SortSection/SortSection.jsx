@@ -1,5 +1,5 @@
-import './sort_section.css'
 /* eslint-disable react/prop-types */
+import './sort_section.css'
 
 export const SortSection = ({onSortClick}) => {
     const handleSortChange = (event) => {

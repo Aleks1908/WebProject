@@ -2,7 +2,6 @@
 import "./navigation_desktop.css";
 import logo from "../../../Assets/logo.png";
 
-// eslint-disable-next-line react/prop-types
 const CategoryLink = ({ category, description, onClick }) => (
   <li
     className="category_option_desk"
@@ -12,7 +11,6 @@ const CategoryLink = ({ category, description, onClick }) => (
   </li>
 );
 
-// eslint-disable-next-line react/prop-types
 export const NavigationDesktop = ({ onCategoryClick }) => {
   const handleCategoryClick = (category, description) => {
     onCategoryClick(category, description);

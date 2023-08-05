@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { useState } from 'react';
 import logo from "../../../Assets/logo.png";
 import './navigation_mobile.css' ;
@@ -6,7 +7,6 @@ import { FiMenu } from 'react-icons/fi';
 import FilteringMenu from '../../FilterSection/FilteringMenu';
 import { SortSection } from '../../SortSection/SortSection';
 
-// eslint-disable-next-line react/prop-types
 export const NavigationMobile = ({handleFilterClick, handleSortClick}) => {
   const [filterClass, setFilterClass] = useState('filter-not-visible')
   const [sortClass, setSortClass] = useState('sort-not-visible')

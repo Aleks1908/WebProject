@@ -6,17 +6,12 @@ import { AiOutlineStar } from 'react-icons/ai';
 import { useEffect, useState } from "react";
 import "./product_section.css";
 
-// eslint-disable-next-line react/prop-types
-
 const Product = ({ name, description, img, stars, price, sale }) => {
   const [showNotification, setShowNotification] = useState(false);
   const hasSale = typeof sale === "number" && sale < price;
 
   const handleAddToCart = () => {
     setShowNotification(true);
-
-    // Additional logic to handle adding the item to the cart can be added here.
-    // For this example, we'll just display the notification for demonstration purposes.
   };
 
   const dismissNotification = () => {
@@ -35,7 +30,6 @@ const Product = ({ name, description, img, stars, price, sale }) => {
         <p>{description}</p>
       </div>
       <div className="product_stars">
-        {/* Assuming you have a component named 'Stars' to display star ratings */}
         <Stars count={stars} />
       </div>
       <div className={`product_price ${hasSale ? "sale" : ""}`}>
@@ -48,7 +42,6 @@ const Product = ({ name, description, img, stars, price, sale }) => {
         {!hasSale && <p>${price}</p>}
       </div>
       <div className="buy_btn">
-        {/* Attach the handleAddToCart function to the onClick event */}
         <a onClick={handleAddToCart}>Add to Cart</a>
       </div>
       {showNotification && (
