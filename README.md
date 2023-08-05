@@ -12,10 +12,8 @@
 
 ```
  cd (pathToProject)/WebProject/npm install
-
 ```
 
 ```
  npm run dev
-
 ```
