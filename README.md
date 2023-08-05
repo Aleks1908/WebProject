@@ -11,10 +11,11 @@
 ## How to setup the project
 
 ```
-
  cd (pathToProject)/WebProject/npm install
 
- npm run dev
+```
 
+```
+ npm run dev
 
 ```
